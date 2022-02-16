@@ -30,33 +30,57 @@
                         <!-- income -->
                         <h3 class="font-semibold mb-4 mt-8 text-2xl	">Income</h3>
                         <label for="Income">Income: </label>
-                        <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
+                        <input class="border-2	border-inherit	rounded px-4 bg-slate-300" id="income-input" type="text"
                             placeholder="enter your income">
 
                         <!-- expenses -->
 
                         <h3 class="font-semibold mb-4 mt-4 text-2xl	">Expenses</h3>
                         <label for="Food">Food: </label>
-                        <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
-                            placeholder="enter your income"> <br>
+                        <input id="food-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
+                            placeholder="enter your amount"> <br>
 
                         <label for="Rent">Rent: </label>
-                        <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
-                            placeholder="enter your income"> <br>
+                        <input id="rent-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
+                            placeholder="enter your amount"> <br>
 
-                        <label for="Clothes">Clothes: </label>
+                        <label id="clothes-input" for="Clothes">Clothes: </label>
                         <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
-                            placeholder="enter your income"><br>
-                        <button class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded	">Calculate</button>
+                            placeholder="enter your amount"><br>
+                        <!-- calculate button -->
+                        <div class="pb-4">
+                            <button class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded"
+                                onclick="calculate()">Calculate</button>
 
-                        <h3>Total Expenses:</h3>
+                        </div>
+
+                        <!-- after Calculated section -->
+
+                        <div>
+                            <h3 id="total-expense" class="font-semibold text-2xl pb-4">Total Expenses:</h3>
+                            <h3 id="balance" class="font-semibold text-2xl">Balance:</h3>
+                        </div>
+
+                        <!-- saving section -->
+                        <div>
+                            <label for="Save">Save: </label>
+                            <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
+                                placeholder="enter your amount">
+                            <label for="percentage">%</label>
+                            <button class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded">Save</button>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="font-semibold text-2xl pb-4">Saving Amount:</h3>
+                            <h3 class="font-semibold text-2xl">Remaining Balance:</h3>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="js/script.js"></script>
 
 </body>
-<script src="js/script.js"></script>
 
 </html>
