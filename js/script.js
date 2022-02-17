@@ -1,3 +1,7 @@
+function getInput() {
+    let incomeValue = document.getElementById("income-input").value;
+    return parseInt(incomeValue);
+}
 
 function calculate() {
     // total expenses 
@@ -15,6 +19,9 @@ function calculate() {
 
 }
 function save() {
-    let savingValue = document.getElementById("saving-input");
-    savingValue.innerText = 10000 * 0.2;
+    let savingValue = document.getElementById("save-input").value;
+    let savingParcentage = parseInt(savingValue);
+    let savingAmount = getInput() * savingParcentage / 100;
+    let saveingOutput = document.getElementById("saving-output");
+    saveingOutput.innerText = savingAmount;
 }
