@@ -21,13 +21,15 @@
     <main>
         <section>
             <div class="grid grid-cols-2 gap-4 w-3/4 mx-auto">
-                <div>
-                    <img src="taka pic.jpg" alt="">
+                <div class="pt-16">
+                    <img src="taka.jpg" alt="">
                 </div>
 
                 <div class="pt-16">
                     <div class="text-center bg-slate-100 border-2 rounded pb-8">
+
                         <!-- income -->
+
                         <h3 class="font-semibold mb-4 mt-8 text-2xl	">Income</h3>
                         <label for="Income">Income: </label>
                         <input class="border-2	border-inherit	rounded px-4 bg-slate-300" id="income-input" type="text"
@@ -36,18 +38,20 @@
                         <!-- expenses -->
 
                         <h3 class="font-semibold mb-4 mt-4 text-2xl	">Expenses</h3>
-                        <label for="Food">Food: </label>
+                        <label for="Food" class="pl-4"> Food: </label>
                         <input id="food-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                             placeholder="enter your amount"> <br>
 
-                        <label for="Rent">Rent: </label>
+                        <label for="Rent" class="pl-6">Rent: </label>
                         <input id="rent-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                             placeholder="enter your amount"> <br>
 
-                        <label for="Clothes">Clothes: </label>
+                        <label for="Clothes">Clothes : </label>
                         <input id="clothes-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                             placeholder="enter your amount"><br>
+
                         <!-- calculate button -->
+
                         <div class="pb-4">
                             <button class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded"
                                 onclick="calculate()">Calculate</button>
@@ -65,6 +69,7 @@
                         </div>
 
                         <!-- saving section -->
+
                         <div>
                             <label for="Save">Save: </label>
                             <input id="save-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
@@ -72,6 +77,9 @@
                             <label for="percentage">%</label>
                             <button onclick="save()" class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded">Save</button>
                         </div>
+
+                        <!-- after remaining balance calculation  -->
+
                         <div class="mt-4">
                             <h3 class="font-semibold text-2xl pb-4">Saving Amount: <span id="saving-output"></span></h3>
                             <h3 class="font-semibold text-2xl">Remaining Balance: <span id="remaining-input"></span>
