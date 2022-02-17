@@ -21,7 +21,7 @@ function varifyError() {
     let savingValue = document.getElementById("save-input").value;
 
     if (parseInt(foodValue) < 0) {
-        alert("please enter valid number");
+        alert("you cant put negative value here sir");
 
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
@@ -29,7 +29,7 @@ function varifyError() {
         document.getElementById("remaining-input").innerText = "";
     }
     if (parseInt(rentValue) < 0) {
-        alert("please enter valid number");
+        alert("you cant put negative value here sir");
 
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
@@ -37,7 +37,7 @@ function varifyError() {
         document.getElementById("remaining-input").innerText = "";
     }
     if (parseInt(clothesValue) < 0) {
-        alert("please enter valid number");
+        alert("you cant put negative value here sir");
 
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
@@ -45,7 +45,7 @@ function varifyError() {
         document.getElementById("remaining-input").innerText = "";
     }
     if (parseInt(incomeValue) < 0) {
-        alert("please enter valid number");
+        alert("you cant put negative value here sir");
 
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
@@ -53,7 +53,7 @@ function varifyError() {
         document.getElementById("remaining-input").innerText = "";
     }
     if (parseInt(savingValue) < 0) {
-        alert("please enter valid number");
+        alert("you cant put negative value here sir");
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
@@ -73,7 +73,7 @@ function varifyError() {
     // error handling part 3 about save percentage
 
     if (parseInt(savingValue) > 100) {
-        alert("oh! you cant save that much");
+        alert("oh! it is too much");
         document.getElementById("saving-output").innerText = "";
         document.getElementById("remaining-input").innerText = "";
     }
@@ -82,7 +82,7 @@ function varifyError() {
 
     if (isNaN(foodValue)) {
 
-        alert("enter a valid number sir");
+        alert("enter a valid food value sir");
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
@@ -90,7 +90,7 @@ function varifyError() {
     }
     if (isNaN(incomeValue)) {
 
-        alert("enter a valid number sir");
+        alert("enter a valid income value sir");
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
@@ -98,7 +98,7 @@ function varifyError() {
     }
     if (isNaN(rentValue)) {
 
-        alert("enter a valid number sir");
+        alert("enter a valid rent value sir");
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
@@ -106,7 +106,7 @@ function varifyError() {
     }
     if (isNaN(clothesValue)) {
 
-        alert("enter a valid number sir");
+        alert("enter a valid clothes value sir");
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
@@ -118,6 +118,13 @@ function varifyError() {
         document.getElementById("balance").innerText = "";
         document.getElementById("total-expense").innerText = "";
         document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+
+    // error handling part 5
+
+    if (parseInt(document.getElementById("saving-output").innerText) > parseInt(document.getElementById("balance").innerText)) {
+        alert("please recheck your saving amount sir");
         document.getElementById("remaining-input").innerText = "";
     }
 
@@ -140,12 +147,6 @@ function calculate() {
     let balanceInput = document.getElementById("balance");
     let totalBalance = parseInt(incomeValue) - totalValue;
     balanceInput.innerText = totalBalance;
-
-    // clearing input value
-    document.getElementById("income-input").innerText = "";
-    document.getElementById("food-input").innerText = "";
-    document.getElementById("rent-input").innerText = "";
-    document.getElementById("clothes-input").innerText = "";
 
     varifyError();
 }
@@ -171,8 +172,6 @@ function save() {
 
     remainingBalanceInput.innerText = Aboutbalance() - savingAmount;
 
-    //    clean up
-    document.getElementById("save-input").innerTex = "";
 
     varifyError();
 }
