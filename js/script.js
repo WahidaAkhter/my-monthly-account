@@ -77,6 +77,50 @@ function varifyError() {
         document.getElementById("saving-output").innerText = "";
         document.getElementById("remaining-input").innerText = "";
     }
+
+    // error handling part 4
+
+    if (isNaN(foodValue)) {
+
+        alert("enter a valid number sir");
+        document.getElementById("balance").innerText = "";
+        document.getElementById("total-expense").innerText = "";
+        document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+    if (isNaN(incomeValue)) {
+
+        alert("enter a valid number sir");
+        document.getElementById("balance").innerText = "";
+        document.getElementById("total-expense").innerText = "";
+        document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+    if (isNaN(rentValue)) {
+
+        alert("enter a valid number sir");
+        document.getElementById("balance").innerText = "";
+        document.getElementById("total-expense").innerText = "";
+        document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+    if (isNaN(clothesValue)) {
+
+        alert("enter a valid number sir");
+        document.getElementById("balance").innerText = "";
+        document.getElementById("total-expense").innerText = "";
+        document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+    if (isNaN(savingValue)) {
+
+        alert("enter a valid number sir");
+        document.getElementById("balance").innerText = "";
+        document.getElementById("total-expense").innerText = "";
+        document.getElementById("saving-output").innerText = "";
+        document.getElementById("remaining-input").innerText = "";
+    }
+
 }
 
 function calculate() {
