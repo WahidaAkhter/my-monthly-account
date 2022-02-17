@@ -44,8 +44,8 @@
                         <input id="rent-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                             placeholder="enter your amount"> <br>
 
-                        <label id="clothes-input" for="Clothes">Clothes: </label>
-                        <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
+                        <label for="Clothes">Clothes: </label>
+                        <input id="clothes-input" class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                             placeholder="enter your amount"><br>
                         <!-- calculate button -->
                         <div class="pb-4">
@@ -57,8 +57,11 @@
                         <!-- after Calculated section -->
 
                         <div>
-                            <h3 id="total-expense" class="font-semibold text-2xl pb-4">Total Expenses:</h3>
-                            <h3 id="balance" class="font-semibold text-2xl">Balance:</h3>
+                            <h3 class="font-semibold text-2xl pb-4">Total Expenses:<span id="total-expense"></span>
+                            </h3>
+
+
+                            <h3 class="font-semibold text-2xl">Balance: <span id="balance"></span></h3>
                         </div>
 
                         <!-- saving section -->
@@ -67,11 +70,12 @@
                             <input class="border-2	border-inherit	rounded px-4 bg-slate-300" type="text"
                                 placeholder="enter your amount">
                             <label for="percentage">%</label>
-                            <button class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded">Save</button>
+                            <button onclick="save()" class="font-bold mt-4 bg-pink-400 px-4 py-2 rounded">Save</button>
                         </div>
                         <div class="mt-4">
-                            <h3 class="font-semibold text-2xl pb-4">Saving Amount:</h3>
-                            <h3 class="font-semibold text-2xl">Remaining Balance:</h3>
+                            <h3 class="font-semibold text-2xl pb-4">Saving Amount: <span id="saving-input"></span></h3>
+                            <h3 class="font-semibold text-2xl">Remaining Balance: <span id="remaining-input"></span>
+                            </h3>
                         </div>
 
                     </div>
